@@ -7,10 +7,11 @@ import {
 } from '@mui/icons-material';
 import { AppBar, Badge, Box, IconButton, Menu, MenuItem, Toolbar, Typography } from '@mui/material';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import LanguageMenu from '../../components/LanguageMenu';
-import SearchBox from './SearchBox';
 
 export default function Navbar() {
+  const { t } = useTranslation();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState<null | HTMLElement>(null);
 
@@ -111,10 +112,8 @@ export default function Navbar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div" sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {import.meta.env.VITE_APP_NAME}
+            {t('GNU/Linux Hardware Compatibility List')}
           </Typography>
-
-          <SearchBox />
 
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>

@@ -1,4 +1,4 @@
-# React App
+# The Web App for GNU/Linux Hardware Compatibility List
 
 ## Get Started
 
